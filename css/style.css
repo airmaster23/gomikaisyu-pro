@@ -10,35 +10,35 @@
 
 /* ===== CSS Variables ===== */
 :root {
-  /* Primary warm orange */
+  /* Brand blue (主役) */
+  --blue:        #4CA1D9;
+  --blue-dark:   #0393dd;
+  --blue-deep:   #0083cf;
+
+  /* Warm orange (アクセント・CTA) */
   --orange:      #eb7633;
   --orange-dark: #c85e1f;
   --orange-lt:   #fff4ed;
   --orange-mid:  #fde8d5;
 
-  /* Blue accent only */
-  --blue:        #4CA1D9;
-  --blue-dark:   #0393dd;
-  --blue-deep:   #0083cf;
-
   /* Neutral warm */
-  --navy:        #2d1f14;
-  --navy-deep:   #1a1108;
+  --navy:        #1e3a5f;
+  --navy-deep:   #122540;
   --green:       #22C55E;
 
-  /* Backgrounds warm cream */
+  /* Backgrounds: 温かいクリーム系 */
   --bg:          #fffaf7;
-  --bg-gray:     #fdf5ef;
+  --bg-gray:     #f4f8fc;
   --bg-warm:     #fde8d5;
-  --bg-dark:     #2d1f14;
+  --bg-dark:     #0b3d6e;
 
   /* Text warm */
-  --text:        #2d1f14;
-  --text-muted:  #7a6050;
+  --text:        #1e2d3d;
+  --text-muted:  #5a7080;
 
-  /* Border warm */
-  --border:      #e8d5c4;
-  --border-dark: #d4b99e;
+  /* Border */
+  --border:      #dce8f0;
+  --border-dark: #b6cdd8;
 
   --font-h:    'Lexend', 'Noto Sans JP', sans-serif;
   --font-body: 'Noto Sans JP', sans-serif;
@@ -51,9 +51,9 @@
   --hh:    72px;
   --hh-top: 36px;
 
-  --sh-sm: 0 2px 12px rgba(235,118,51,.10);
-  --sh-md: 0 4px 28px rgba(235,118,51,.14);
-  --sh-lg: 0 8px 48px rgba(235,118,51,.18);
+  --sh-sm: 0 2px 12px rgba(3,93,177,.10);
+  --sh-md: 0 4px 28px rgba(3,93,177,.14);
+  --sh-lg: 0 8px 48px rgba(3,93,177,.18);
   --tr:    .22s ease;
 }
 
@@ -82,7 +82,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 /* ===== Sections ===== */
 .section         { padding: 88px 0; }
 .section--gray   { background: var(--bg-gray); }
-.section--dark   { background: var(--navy); }
+.section--dark   { background: var(--bg-dark); }
 
 .section-label {
   display: inline-block;
@@ -167,7 +167,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   white-space: nowrap;
 }
 .btn-primary {
-  background: var(--orange);
+  background: var(--blue-dark);
   color: #fff;
   box-shadow: 0 4px 18px rgba(249,115,22,.38);
 }
@@ -215,7 +215,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 .btn-cta-white {
   background: #fff;
-  color: var(--orange-dark);
+  color: var(--blue-deep);
   font-size: 16px;
   padding: 16px 36px;
   border-radius: var(--r-md);
@@ -238,7 +238,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .header.scrolled { box-shadow: var(--sh-md); }
 
 .header-top {
-  background: var(--navy);
+  background: var(--blue-deep);
   padding: 0;
   height: var(--hh-top);
   display: flex;
@@ -305,7 +305,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .logo-mark {
   width: 40px;
   height: 40px;
-  background: linear-gradient(135deg, var(--orange), var(--orange-dark));
+  background: linear-gradient(135deg, var(--blue-dark), var(--blue));
   border-radius: 10px;
   display: flex;
   align-items: center;
@@ -327,7 +327,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .logo-sub {
   display: block;
   font-size: 10px;
-  color: var(--orange);
+  color: var(--blue);
   font-weight: 700;
   letter-spacing: .04em;
 }
@@ -346,7 +346,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   border-bottom: 2px solid transparent;
   transition: all var(--tr);
 }
-.gnav a:hover { color: var(--orange); border-bottom-color: var(--orange); }
+.gnav a:hover { color: var(--blue-dark); border-bottom-color: var(--blue-dark); }
 
 .header-cta {
   display: flex;
@@ -411,7 +411,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   gap: 8px;
   font-size: 18px !important;
   font-weight: 900 !important;
-  color: var(--orange) !important;
+  color: var(--blue-dark) !important;
   font-family: var(--font-num);
   border-bottom: none !important;
   margin-top: 8px;
@@ -421,7 +421,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .hero {
   min-height: 100svh;
   margin-top: calc(var(--hh) + var(--hh-top));
-  background: linear-gradient(135deg, #1a1108 0%, #2d1f14 50%, #3d2a1a 100%);
+  background: linear-gradient(135deg, #0b3d6e 0%, #0393dd 50%, #4CA1D9 100%);
   display: flex;
   align-items: center;
   position: relative;
@@ -476,7 +476,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 .hero-kicker-dot {
   width: 8px; height: 8px;
-  background: var(--orange);
+  background: var(--blue-dark);
   border-radius: 50%;
   position: relative;
 }
@@ -704,7 +704,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   font-size: 14px;
   font-weight: 600;
 }
-.trust-item strong { color: #fff3c4; }
+.trust-item strong { color: #ffd68a; }
 .trust-sep {
   width: 1px;
   height: 24px;
@@ -836,13 +836,13 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 .service-item-icon {
   width: 68px; height: 68px;
-  background: var(--orange-lt);
+  background: #e8f4fd;
   border-radius: var(--r-md);
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 18px;
-  color: var(--orange-dark);
+  color: var(--blue-dark);
 }
 .service-item-title {
   font-size: 20px;
@@ -880,7 +880,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   border: 1px solid var(--border);
 }
 .case-header {
-  background: var(--orange);
+  background: var(--blue-dark);
   padding: 16px 20px;
   display: flex;
   align-items: center;
@@ -992,7 +992,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   transition: all var(--tr);
   font-family: var(--font-body);
 }
-.price-tab.active { color: var(--orange); border-bottom-color: var(--orange); background: var(--bg); }
+.price-tab.active { color: var(--blue-dark); border-bottom-color: var(--blue-dark); background: var(--bg); }
 .price-tab:hover:not(.active) { color: var(--navy); }
 
 .price-table-wrap { padding: 24px; }
@@ -1064,11 +1064,11 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   font-size: 15px;
   font-weight: 800;
   color: #fff;
-  box-shadow: 0 2px 8px rgba(235,118,51,.4);
+  box-shadow: 0 2px 8px rgba(3,147,221,.4);
 }
 .flow-step-icon {
   width: 60px; height: 60px;
-  background: var(--orange-lt);
+  background: #e8f4fd;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -1089,8 +1089,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   gap: 4px;
   font-size: 12px;
   font-weight: 700;
-  color: var(--orange-dark);
-  background: var(--orange-lt);
+  color: var(--blue-dark);
+  background: #e8f4fd;
   padding: 3px 10px;
   border-radius: 100px;
 }
@@ -1218,7 +1218,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .faq-q-text { font-size: 15px; font-weight: 600; color: var(--navy); flex: 1; }
 .faq-chevron {
   width: 22px; height: 22px;
-  color: var(--orange);
+  color: var(--blue-dark);
   flex-shrink: 0;
   transition: transform .3s ease;
 }
@@ -1342,7 +1342,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   align-items: start;
 }
 .contact-info {
-  background: var(--navy);
+  background: var(--bg-dark);
   border-radius: var(--r-lg);
   padding: 40px 32px;
   color: #fff;
@@ -1429,8 +1429,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .form-input:focus,
 .form-select:focus,
 .form-textarea:focus {
-  border-color: var(--orange);
-  box-shadow: 0 0 0 3px rgba(235,118,51,.12);
+  border-color: var(--blue-dark);
+  box-shadow: 0 0 0 3px rgba(3,147,221,.12);
 }
 .form-textarea { resize: vertical; min-height: 120px; }
 .form-submit {
@@ -1448,7 +1448,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 /* ===== FOOTER ===== */
 .footer {
-  background: var(--navy-deep);
+  background: #0a2d4a;
   color: rgba(255,255,255,.75);
   padding: 60px 0 0;
 }
@@ -1467,7 +1467,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 .footer-logo-mark {
   width: 42px; height: 42px;
-  background: linear-gradient(135deg, var(--orange), var(--orange-dark));
+  background: linear-gradient(135deg, var(--blue-dark), var(--blue));
   border-radius: 10px;
   display: flex;
   align-items: center;
@@ -1540,7 +1540,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   box-shadow: 0 -4px 20px rgba(0,0,0,.2);
 }
 .fixed-phone-bar-tel {
-  background: var(--navy);
+  background: var(--blue-deep);
   color: #fff;
   display: flex;
   flex-direction: column;
